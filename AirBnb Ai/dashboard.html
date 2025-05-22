@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - HostGenius</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <span>HostGenius</span>
+                </div>
+                <div class="user-profile">
+                    <img src="images/user-avatar.jpg" alt="User Avatar">
+                    <div class="user-info">
+                        <span class="user-name">John Doe</span>
+                        <span class="user-email">john@example.com</span>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active">
+                        <a href="dashboard.html">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="bookings.html">
+                            <i class="fas fa-calendar"></i>
+                            <span>Bookings</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-comment-alt"></i>
+                            <span>Message Templates</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-calculator"></i>
+                            <span>Pricing Calculator</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-book-open"></i>
+                            <span>Welcome Books</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Listing Optimizer</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-money-bill-wave"></i>
+                            <span>Payments (M-Pesa)</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-cog"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-footer">
+                <a href="#" class="btn btn-upgrade">
+                    <i class="fas fa-crown"></i> Upgrade Plan
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <header class="content-header">
+                <h1>Dashboard Overview</h1>
+                <div class="header-actions">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search...">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="notifications">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">3</span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="dashboard-widgets">
+                <!-- Performance Overview -->
+                <div class="widget performance-widget">
+                    <div class="widget-header">
+                        <h2>Performance Overview</h2>
+                        <select class="time-selector">
+                            <option>Last 7 days</option>
+                            <option>Last 30 days</option>
+                            <option>Last 90 days</option>
+                        </select>
+                    </div>
+                    <div class="performance-metrics">
+                        <div class="metric">
+                            <span class="value">$2,450</span>
+                            <span class="label">Earnings</span>
+                            <span class="trend positive"><i class="fas fa-arrow-up"></i> 12%</span>
+                        </div>
+                        <div class="metric">
+                            <span class="value">85%</span>
+                            <span class="label">Occupancy</span>
+                            <span class="trend positive"><i class="fas fa-arrow-up"></i> 5%</span>
+                        </div>
+                        <div class="metric">
+                            <span class="value">4.9</span>
+                            <span class="label">Avg. Rating</span>
+                            <span class="trend neutral"><i class="fas fa-minus"></i> 0%</span>
+                        </div>
+                    </div>
+                    <div class="performance-chart">
+                        <!-- Chart would be rendered here with JavaScript -->
+                        <canvas id="performanceChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Upcoming Bookings -->
+                <div class="widget bookings-widget">
+                    <div class="widget-header">
+                        <h2>Upcoming Bookings</h2>
+                        <a href="bookings.html" class="view-all">View All</a>
+                    </div>
+                    <div class="bookings-list">
+                        <div class="booking-item">
+                            <div class="booking-info">
+                                <div class="booking-dates">
+                                    <span class="date">May 15 - 20, 2023</span>
+                                    <span class="nights">5 nights</span>
+                                </div>
+                                <div class="booking-guest">
+                                    <img src="images/guest1.jpg" alt="Guest">
+                                    <span>Michael Johnson</span>
+                                </div>
+                            </div>
+                            <div class="booking-amount">
+                                <span class="amount">$875</span>
+                                <span class="status confirmed">Confirmed</span>
+                            </div>
+                        </div>
+                        <div class="booking-item">
+                            <div class="booking-info">
+                                <div class="booking-dates">
+                                    <span class="date">May 22 - 25, 2023</span>
+                                    <span class="nights">3 nights</span>
+                                </div>
+                                <div class="booking-guest">
+                                    <img src="images/guest2.jpg" alt="Guest">
+                                    <span>Sarah Williams</span>
+                                </div>
+                            </div>
+                            <div class="booking-amount">
+                                <span class="amount">$525</span>
+                                <span class="status pending">Pending</span>
+                            </div>
+                        </div>
+                        <div class="booking-item">
+                            <div class="booking-info">
+                                <div class="booking-dates">
+                                    <span class="date">May 28 - Jun 2, 2023</span>
+                                    <span class="nights">5 nights</span>
+                                </div>
+                                <div class="booking-guest">
+                                    <img src="images/guest3.jpg" alt="Guest">
+                                    <span>David Kimani</span>
+                                </div>
+                            </div>
+                            <div class="booking-amount">
+                                <span class="amount">$920</span>
+                                <span class="status confirmed">Confirmed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Actions -->
+                <div class="widget quick-actions-widget">
+                    <div class="widget-header">
+                        <h2>Quick Actions</h2>
+                    </div>
+                    <div class="actions-grid">
+                        <a href="#" class="action-card">
+                            <i class="fas fa-comment"></i>
+                            <span>Send Message</span>
+                        </a>
+                        <a href="#" class="action-card">
+                            <i class="fas fa-calendar-plus"></i>
+                            <span>Add Booking</span>
+                        </a>
+                        <a href="#" class="action-card">
+                            <i class="fas fa-money-bill-wave"></i>
+                            <span>Process Payment</span>
+                        </a>
+                        <a href="#" class="action-card">
+                            <i class="fas fa-book"></i>
+                            <span>Generate Welcome Book</span>
+                        </a>
+                        <a href="#" class="action-card">
+                            <i class="fas fa-bullhorn"></i>
+                            <span>Optimize Listing</span>
+                        </a>
+                        <a href="#" class="action-card">
+                            <i class="fas fa-calculator"></i>
+                            <span>Adjust Pricing</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Recent Messages -->
+                <div class="widget messages-widget">
+                    <div class="widget-header">
+                        <h2>Recent Messages</h2>
+                        <a href="#" class="view-all">View All</a>
+                    </div>
+                    <div class="messages-list">
+                        <div class="message-item unread">
+                            <div class="message-sender">
+                                <img src="images/guest1.jpg" alt="Guest">
+                                <span>Michael Johnson</span>
+                            </div>
+                            <div class="message-preview">
+                                <p>Hi, I was wondering if you could accommodate a late check-out on Sunday?</p>
+                            </div>
+                            <div class="message-time">
+                                <span>2 hours ago</span>
+                                <span class="unread-badge"></span>
+                            </div>
+                        </div>
+                        <div class="message-item">
+                            <div class="message-sender">
+                                <img src="images/guest2.jpg" alt="Guest">
+                                <span>Sarah Williams</span>
+                            </div>
+                            <div class="message-preview">
+                                <p>Thank you for accepting my booking! Could you recommend some good restaurants nearby?</p>
+                            </div>
+                            <div class="message-time">
+                                <span>1 day ago</span>
+                            </div>
+                        </div>
+                        <div class="message-item">
+                            <div class="message-sender">
+                                <img src="images/guest4.jpg" alt="Guest">
+                                <span>Robert Mwangi</span>
+                            </div>
+                            <div class="message-preview">
+                                <p>I've left a review for my stay. Thanks for everything!</p>
+                            </div>
+                            <div class="message-time">
+                                <span>3 days ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
